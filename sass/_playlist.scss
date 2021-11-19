@@ -7,6 +7,11 @@
     &-header {
 
     }
+    @include repons(768px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+    }
     &-heading {
         margin-left: -1rem;
         h2 {
@@ -32,10 +37,10 @@
             width: 45%;
         }
         &-artist {
-            width: 45%;
+            width: 40%;
         }
         &-option {
-            width: 5%;
+            width: 10%;
         }
     }
     .songs {
@@ -113,13 +118,21 @@
                 }
             }
             &-name {
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                padding-right: 2rem;
             }
             &-artist {
-                width: 45%;
+                width: 40%;
                 font-size: 1.4rem;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                padding-right: 2rem;
             }
             &-option {
-                width: 5%;
+                width: 10%;
                 position: relative;
                 i {
                     margin-left: auto;

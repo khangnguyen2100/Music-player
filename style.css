@@ -167,7 +167,7 @@ body.light-mode .video-Bg::before {
 }
 @media screen and (max-width: 1024px) {
   .app .main {
-    width: 1000%;
+    width: 100%;
   }
 }
 
@@ -280,6 +280,12 @@ body.light-mode .video-Bg::before {
   .sidebar .nav {
     margin-left: 5rem;
   }
+  .sidebar .nav-link {
+    font-size: 2rem;
+  }
+  .sidebar .nav-link i {
+    font-size: 2.4rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -381,6 +387,7 @@ body.light-mode .video-Bg::before {
 @media screen and (max-width: 600px) {
   .header-input .search-input {
     font-size: 1.2rem;
+    font: 45%;
   }
   .header-input .search-input:focus {
     width: 90%;
@@ -409,6 +416,14 @@ body.light-mode .video-Bg::before {
   cursor: pointer;
   color: #f9fafb;
 }
+@media screen and (max-width: 600px) {
+  .header-profile {
+    margin-right: 2rem;
+  }
+  .header-profile div:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
 .header-profile .noti {
   position: relative;
 }
@@ -430,6 +445,12 @@ body.light-mode .video-Bg::before {
   height: 4rem;
   width: 4rem;
 }
+@media screen and (max-width: 600px) {
+  .header-profile .avatar {
+    height: 3rem;
+    width: 3rem;
+  }
+}
 .header-profile .avatar img {
   border-radius: 50%;
 }
@@ -447,6 +468,12 @@ body.light-mode .video-Bg::before {
   padding-right: 2.5rem;
   padding-top: 1.5rem;
   height: calc(100% - 6rem);
+}
+@media screen and (max-width: 768px) {
+  .playlist {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 .playlist-heading {
   margin-left: -1rem;
@@ -474,10 +501,10 @@ body.light-mode .video-Bg::before {
   width: 45%;
 }
 .playlist .song-info-artist {
-  width: 45%;
+  width: 40%;
 }
 .playlist .song-info-option {
-  width: 5%;
+  width: 10%;
 }
 .playlist .songs {
   width: 100%;
@@ -550,12 +577,22 @@ body.light-mode .video-Bg::before {
 .playlist .songs .song:hover .song-avatar::before {
   opacity: 1;
 }
+.playlist .songs .song-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 2rem;
+}
 .playlist .songs .song-artist {
-  width: 45%;
+  width: 40%;
   font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 2rem;
 }
 .playlist .songs .song-option {
-  width: 5%;
+  width: 10%;
   position: relative;
 }
 .playlist .songs .song-option i {
@@ -581,6 +618,11 @@ body.light-mode .video-Bg::before {
   width: 100%;
   height: 9rem;
 }
+@media screen and (max-width: 900px) {
+  .playing {
+    padding: 0 2rem;
+  }
+}
 .playing-song {
   display: flex;
   align-items: center;
@@ -588,6 +630,7 @@ body.light-mode .video-Bg::before {
 }
 .playing-cd {
   margin-right: 1.5em;
+  min-width: 5rem;
 }
 .playing-cd img {
   width: 5rem;
@@ -607,7 +650,7 @@ body.light-mode .video-Bg::before {
 }
 @media screen and (max-width: 900px) {
   .playing-song {
-    width: 40%;
+    width: 45%;
   }
 }
 
@@ -636,8 +679,8 @@ body.light-mode .video-Bg::before {
   transform: scale(1.1);
 }
 .playing-btn .btn-toggle {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background-color: var(--blue-color);
   display: flex;
@@ -682,13 +725,13 @@ body.light-mode .video-Bg::before {
 .playing-time {
   font-weight: 400;
   font-size: 1.4rem;
-  width: 9%;
+  width: 13%;
 }
 .playing-time-duration {
   text-align: right;
 }
 .playing-progress {
-  width: 82%;
+  width: 74%;
   display: flex;
   align-items: center;
 }
@@ -735,7 +778,7 @@ body.light-mode .video-Bg::before {
 }
 @media screen and (max-width: 900px) {
   .playing-control {
-    width: 60%;
+    width: 55%;
   }
 }
 
