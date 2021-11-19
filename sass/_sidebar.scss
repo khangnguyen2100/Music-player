@@ -1,0 +1,77 @@
+.sidebar {
+    border-right:  1px solid var(--border-color);
+    width: 20%;
+    
+    .logo {
+        color: var(--title-color);
+        i {
+            font-size: 3.2rem;
+        }
+        display: block;
+        margin-top: 2rem;
+        font-size: 2.4rem;
+        text-align: center;
+        font-weight: 500;
+    }
+    .nav {
+        margin-left: 3rem;
+        margin-top: 5rem;
+        &-list {
+            
+        }
+        &-item {
+            padding: 1rem;
+            transition : all .3s ease;
+            
+            border-radius : .5rem;
+            margin-right: 2.5rem;
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+            &:hover {
+                background-color: var(--hover-menu-bg);
+            }
+            &:active {
+                transform : scale(1.03)
+            }
+        }
+        &-link {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            i {
+                margin-right: 0.7rem;
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+        }
+        &-section {
+            text-transform: capitalize;
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+        }
+    }
+    @include repons(1024px) {
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+
+        width: 55%;
+        transition: all .5s ease;
+        position: fixed;
+        left: 0;
+        top:0;
+        height: 100%;
+        background-color: var(--sidebar-color);
+        z-index: 1000;
+        .nav {
+            margin-left: 5rem;
+        }
+    }
+}
+.sidebar.active {
+    @include repons(1024px) {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}

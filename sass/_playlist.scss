@@ -1,0 +1,135 @@
+.playlist {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.5rem;
+    height: calc(100% - 6rem);
+    &-header {
+
+    }
+    &-heading {
+        margin-left: -1rem;
+        h2 {
+            font-size: 3.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        span {
+            color : var(--text-color)
+        }
+    }
+    .song-info {
+        display: flex;
+        align-items: center;
+        padding: .5rem 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        &-count {
+            width: 5%;
+            margin-left: 1.5rem;
+        }
+        &-name {
+            width: 45%;
+        }
+        &-artist {
+            width: 45%;
+        }
+        &-option {
+            width: 5%;
+        }
+    }
+    .songs {
+        width: 100%;
+        background-color: var(--theme-bg-color);
+        border-radius: 1rem;
+        overflow: scroll;
+        height: 64.5vh;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .song {
+            width: 100%;
+            padding: .5rem 0;  
+            display: flex;
+            align-items: center;
+
+            transition: all .2s ease;
+            text-transform: capitalize;
+            cursor: pointer;
+            &:hover {
+                transition: all .2s ease;
+                background-color: var(--theme-bg-color);
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--border-color);
+            }
+            &-count {
+                width: 5%;
+                margin-left: 1.5rem;
+            }
+            &-info {
+                width: 45%;
+            }
+            &-avatar {
+                margin-right: 2rem;
+                position: relative;
+                z-index: 0;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top : 0;
+                    left :0;
+                    width: 100%;
+                    height: 100%;
+                    background-color:rgba(#000,.4);
+                    z-index: 1;
+                    border-radius: 5px;
+                    opacity: 0;
+                }
+                img {
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 5px;
+                }
+                i {
+                    position: absolute;
+                    z-index: 5;
+                    top :50%;
+                    left : 50%;
+                    transform : translate(-50%,-50%);
+                    opacity: 0;
+                    transition: all .2s;
+                    color : #f9f9f9;
+                }
+            }
+            &:hover {
+                .song-avatar {
+                    i {
+                        opacity: 1;
+                    }
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+            &-name {
+            }
+            &-artist {
+                width: 45%;
+                font-size: 1.4rem;
+            }
+            &-option {
+                width: 5%;
+                position: relative;
+                i {
+                    margin-left: auto;
+                    padding:0.5rem;
+                }
+            }
+        }
+        .song.active {
+            transition: all .2s ease;
+            background-color: var(--theme-bg-color);
+        }
+    }
+}

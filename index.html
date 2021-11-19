@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Apple music player</title>
+</head>
+<body>
+    <div class="video-Bg">
+        <video width="320" height="240" autoplay loop muted>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+            Sorry your browser doesn't support video tag
+        </video>
+    </div>
+    <div class="app">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fab fa-apple"></i>
+                <span>MUSIC</span>
+            </div>
+            <nav class="nav">
+                <h3 class="nav-section">App</h3>
+
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-play-circle"></i>
+                            Listen now
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-browser"></i>
+                            Browse
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-broadcast-tower"></i>
+                            radio
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="nav-section">Library</h3>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">
+                        <i class="far fa-clock"></i>
+                        Recently Added
+                    </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">
+                        <i class="far fa-user-alt"></i>
+                        Artists
+                    </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">
+                        <i class="far fa-compact-disc"></i>
+                        Albums
+                    </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">
+                        <i class="far fa-music"></i>
+                        Songs
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="btn-mobile">
+                    <div class="btn-mobile-wrapper">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                    </div>
+                </div>
+                <div class="header-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+                <div class="header-profile">
+                    <div class="noti">
+                        <i class="fas fa-bell"></i>
+                        <span>3</span>
+                    </div>
+                    <div class="cloud">
+                        <i class="fas fa-clouds"></i>
+                    </div>
+                    <div class="avatar">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtyBqkFlsRHcsvoZeKX0dwgwmn9zOxfeZkHQ&usqp=CAU" alt="">
+                    </div>
+                    <div class="theme">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist">
+                <div class="playlist-header">
+                    <div class="playlist-heading">
+                        <h2></h2>
+                        <span class="length-song"></span>
+                    </div>
+                    <div class="song-info">
+                        <h3 class="song-info-count">
+                            #
+                        </h3>
+                        <h3 class="song-info-name">Song</h3>
+                        <h3 class="song-info-artist">Artist</h3>
+                        <div class="song-info-option"></div>
+                    </div>
+                </div>
+                <div class="songs">
+                    <!-- <div class="song">
+                        <div class="song-count">
+                            01
+                        </div>
+                        <div class="song-info">
+                            <div class="song-avatar">
+                                <i class="fas fa-play"></i>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtyBqkFlsRHcsvoZeKX0dwgwmn9zOxfeZkHQ&usqp=CAU" alt="" class="song-avatar-img">
+                            </div>
+                            <p class="song-name">Calm down</p>
+                        </div>
+                        <p class="song-artist">G-eazy</p>
+                        <p class="song-time">3:25</p>
+                        <div class="song-option">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <div class="dropdown">
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">
+                                    Add to playlist
+                                    <i class="far fa-music"></i>
+                                </a></li>
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">
+                                    play next
+                                    <i class="far fa-chevron-double-right"></i>
+                                </a></li>
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">
+                                    love
+                                    <i class="far fa-heart"></i>
+                                </a></li>
+                                <li class="dropdown-item"><a href="#" class="dropdown-link">
+                                    share
+                                    <i class="far fa-share"></i>
+                                </a></li>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="playing">
+                <div class="playing-song">
+                    <div class="playing-cd">
+                        <img src="" alt="" class="cd">
+                    </div>
+                    <div class="playing-info">
+                        <h3 class="playing-name"></h3>
+                        <p class="playing-artist"></p>
+                    </div>
+                </div>
+                <div class="playing-control">
+                    <div class="playing-btn">
+                        <div class="btn btn-random">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <div class="btn btn-prev">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                        <div class="btn btn-toggle">
+                            <i class="fas fa-pause btn-toggle-pause"></i>
+                            <i class="fas fa-play btn-toggle-play"></i>
+                        </div>
+                        <div class="btn btn-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                        <div class="btn btn-repeat">
+                            <i class="fas fa-repeat-alt"></i>
+                        </div>
+                    </div>
+                    <div class="playing-bar">
+                        <p class="playing-time playing-time-current">0:00</p>
+                        <div class="playing-progress">
+                            <input type="range" name="" id="progress" class="progress" step="1" min="0" max="100" value="0">
+                            <audio src="" class="audio"></audio>
+                        </div>
+                        <p class="playing-time playing-time-duration"></p>
+                    </div>
+                </div>
+                <div class="playing-option">
+                    <i class="fas fa-microscope"></i>
+                    <i class="fas fa-bookmark"></i>
+                    <i class="fab fa-500px"></i>
+                    <div class="playing-option-volume">
+                        <i class="fas fa-volume-up"></i>
+                        <input type="range" min="0" max="100" step="1" value="100" class="volume">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

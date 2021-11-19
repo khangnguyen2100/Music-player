@@ -1,0 +1,49 @@
+:root {
+    --body-font: "Poppins", sans-serif;
+    // text color
+    --title-color: #f9fafb;
+    --text-color : #999ba5;
+    
+    // text color
+    --inactive-color:rgb(113 119 144 / 78%) ; // heading-color
+    //dropdown
+    --dropdown-bg: #21242d;
+    --dropdown-hover: rgb(42 46 60);
+    // popup
+    --popup-bg: rgb(22 25 37);
+    --overlay-bg: rgba(36, 39, 59, 0.8);
+    //Bg color
+    --theme-bg-color: rgba(16 18 27 / 40%); // app Bg , main-content x2 , li hover, ul border
+    --content-bg: rgb(146 151 179 / 13%);
+    --theme-bg-color: rgba(16 18 27 / 40%);
+    --search-bg: #14162b; 
+    --hover-menu-bg: rgba(12 15 25 / 30%); // nav hover
+    //other
+    --blue-color : #3a6df0;
+    --blue-dark-color : #5f27cd; // blue hover
+    --border-color: rgba(113 119 144 / 25%); 
+    --button-inactive: rgb(249 250 251 / 55%); // dot-color
+    --scrollbar-bg: rgb(1 2 3 / 40%);
+    --dark-mode-btn  : #ffce45;
+    --playing-color : #1f1f1f;
+    --sidebar-color : #2c3e50;
+}
+.light-mode {
+    --text-color : #3c3a3a;
+    --title-color : #333;
+    --theme-bg-color: rgb(255 255 255 / 31%);
+    --inactive-color: #333333;
+    --button-inactive: #3c3a3a;
+    --search-bg: rgb(255 255 255 / 31%);
+    --dropdown-bg: #f7f7f7;
+    --overlay-bg: rgb(255 255 255 / 30%);
+    --dropdown-hover: rgb(236 236 236);
+    --border-color: rgb(255 255 255 / 35%);
+    --popup-bg: rgb(255 255 255);
+    --hover-menu-bg: rgba(255 255 255 / 35%);
+    --scrollbar-bg: rgb(255 253 253 / 57%);
+    --dark-mode-btn  : #444;
+    --playing-color : #c7ecee;
+    --sidebar-color : #f9f9f9;
+
+}

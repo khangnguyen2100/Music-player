@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@mixin repons($bp) {
+    @media screen and (max-width: $bp) {
+        @content
+    }
+}
+* {
+    box-sizing: border-box;
+    outline:  none;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    height: 100vh;
+    @include repons(1024px) {
+        font-size: 56.25%;
+    }
+    @include repons(768px) {
+        font-size: 53.125%;
+    }
+    @include repons(500px) {
+        font-size: 50%;
+    }
+    @include repons(400px) {
+        font-size: 46.875%;
+    }
+}
+
+a,input,button {
+    font-family: var(--body-font);
+}
+a {
+    text-decoration: none;
+    color : var(--text-color)
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+body {
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100%;
+    
+    font-family: var(--body-font);
+    color : var(--text-color);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    @include repons(600px) {
+        padding: 0;
+    }
+}
+h2,h3 {
+    color : var(--title-color);
+}
+li {
+    list-style-type: none;
+}
+.video-Bg {
+    position :fixed;
+    top : 0;
+    left : 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("./macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg");
+    background-position: center;
+    background-size : cover;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+body.light-mode {
+    .song-avatar::before {
+        background-color: rgba(#fff ,.4) !important;
+    }
+    .video-Bg {
+        &::before {
+            content: '';
+            position: absolute;
+            top : 0;
+            left : 0;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, 
+            rgba(255, 255, 255, 0.45) 100%);
+            backdrop-filter: saturate(3);
+            }
+    }
+}
+.app {
+    max-width: 125rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+
+    display: flex;
+    background-color: var(--theme-bg-color);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    @include repons(600px) {
+        height: 100vh;
+        border-radius : 0;
+    }
+    .main {
+        width: 80%;
+        .playlist {
+            width: 100%;
+        }
+    }
+    @include repons(1024px) {
+        .main {
+            width: 1000%;
+        }
+    }
+}
+.dropdown {
+    background-color: var(--dropdown-bg);
+    position: absolute;
+    right :0;
+    top:3rem;
+
+    width: 20rem;
+    border-radius : 1rem;
+    z-index: 50;
+    overflow: hidden;
+    transform: translateY(-5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    &-item {
+        padding: 1rem 1.5rem;
+        transition: all .2s;
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+        &:hover {
+            background-color: var(--dropdown-hover);
+        }
+    }
+    &-link {
+        font-size: 1.3rem;
+        display: block;
+        text-transform: capitalize;
+        position: relative;
+        i {
+            position: absolute;
+            right : 0;
+            top : 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+
+        }
+    }
+}
+.dropdown.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+
