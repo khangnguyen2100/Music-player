@@ -118,7 +118,7 @@ li {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("./macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg");
+  background-image: url("./assets/fallback.jpg");
   background-position: center;
   background-size: cover;
 }
