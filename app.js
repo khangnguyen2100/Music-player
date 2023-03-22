@@ -34,10 +34,10 @@ function getApi(api) {
     fetch(api)
     .then(res => res.json())
     .then(data => {
-        // Rap VN    data.songs.top100_VN[4].songs
-        // hip hop   data.songs.top100_AM[2].songs
-        var songs = data.songs.top100_AM[0].songs
-        var name = data.songs.top100_AM[0].name
+        // Rap VN    data.top100_VN[4].songs
+        // hip hop   data.top100_AM[2].songs
+        var songs = data.top100_AM[0].songs
+        var name = data.top100_AM[0].name
         start(songs,name)
     });
 }
